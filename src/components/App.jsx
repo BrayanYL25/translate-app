@@ -42,7 +42,7 @@ export default function App () {
 
             <span className='absolute bottom-[120px] right-[35px] text-steelBlue'>{text.length}/500</span>
             <section className='flex justify-between items-center'>
-              <ControlSection />
+              <ControlSection text={text} lang={fromLang} />
               <TranslateButton onClick={() => setText(text)} />
             </section>
           </TranslationArea>
@@ -58,7 +58,7 @@ export default function App () {
 
             <textarea name='input translation' id='translation' cols='30' rows='8' className='bg-transparent resize-none outline-none text-offWhite w-[100%] hover:cursor-default' readOnly value={translate} />
             <section className='flex items-center'>
-              <ControlSection />
+              <ControlSection text={translate} lang={toLang} />
             </section>
           </TranslationArea>
         </section>
